@@ -1,28 +1,41 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <EntradaInfo/>
+    <Table :todos="tasks"  />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import EntradaInfo from './components/EntradaInfo'
+import Table from  './components/Table'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    EntradaInfo,
+    Table,
+  },
+  data: function() {
+   return {
+     tasks: this.tasks,
+
+   }
+ },
+ 
 }
 </script>
 
 <style>
 #app {
+  width: 1000px;
+  margin: auto;
+  height: auto;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 20px;
 }
 </style>
